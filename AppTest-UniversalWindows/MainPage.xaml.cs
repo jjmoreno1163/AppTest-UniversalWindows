@@ -23,9 +23,11 @@ namespace AppTest_UniversalWindows
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        // initialisations
         public MainPage()
         {
             this.InitializeComponent();
+
             countryList.Add(new Country
             {
                 Name = "Switzerland",
@@ -44,8 +46,25 @@ namespace AppTest_UniversalWindows
             {
                 cboBx_CurrencyCode.Items.Add(country.CurrencyCode);
             }
-            txBx_CurrencyAmount.Text = "1.0";
             cboBx_CurrencyCode.SelectedIndex = 0;
+            txBx_CurrencyAmount.Text = "";
+
+            // pour que le clavier soit numérique - FIX ME - ne marche pas
+            //InputScope scope = new InputScope();
+            //InputScopeName scopeName = new InputScopeName();
+            //scopeName.NameValue = InputScopeNameValue.CurrencyAmount;
+            //scope.Names.Add(scopeName);
+            //txBx_CurrencyAmount.InputScope = scope;
+
+            // 2e option - FIX ME - ne marche pas non plus
+            //txBx_CurrencyAmount.InputScope = new InputScope()
+            //{
+            //    Names = { new InputScopeName(InputScopeNameValue.Number)}
+            //};
+
+            // Pour ne pas que le focus soit sur la Text box au démarrage - FIX ME - ne marche pas
+            var foc = FocusManager.GetFocusedElement();
+            FocusManager.TryMoveFocus(FocusNavigationDirection.Down);
         }
 
         public class Country
