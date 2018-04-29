@@ -23,5 +23,13 @@
         </Button>
         <TextBox x:Name="txBx_ConversionResult" HorizontalAlignment="Center" Height="50" Margin="0,400,0,0" Text="Conversion Result" VerticalAlignment="Top" Width="260" FontWeight="Bold" FontSize="24" TextAlignment="Center" Background="#66F6F8F9" BorderBrush="#66060000" IsReadOnly="True"/>
         <Image x:Name="img_TargetCurrrencyFlag" HorizontalAlignment="Center" Margin="0,320,0,0" VerticalAlignment="Top" Width="100" Source="Assets/Flag-of-Europe.png"/>
+        <Button x:Name="bt_Quit" Content="Quit" HorizontalAlignment="Center" Height="35" Margin="715,18,20,0" VerticalAlignment="Top" Width="65" FontSize="14" FontWeight="Bold" BorderBrush="#FF023A1B" Click="bt_Quit_Click">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FFA3FFD5" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
     </Grid>
 </Page>

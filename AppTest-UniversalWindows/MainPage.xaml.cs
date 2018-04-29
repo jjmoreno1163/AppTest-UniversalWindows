@@ -112,5 +112,10 @@ namespace AppTest_UniversalWindows
                 txBx_ConversionResult.Text = ConvertCurrencyTxt(txBx_CurrencyAmount.Text, countryList[cboBx_CurrencyCode.SelectedIndex].ToEuroRate);
             }
         }
+
+        private void bt_Quit_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Exit();
+        }
     }
 }
